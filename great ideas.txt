@@ -1,0 +1,67 @@
+
+
+Digestion system
+
+$stomach slowly reduces according to baseline Digestive stat.
+As it decrements, $rectum and $energy increment at the same rate.
+$energy is used all the time, when idle and when moving.
+Idle consumption is governed by heart rate
+Movement consumption = heart rate modulated by endurance
+
+$rectum: as stomach decrements, it increments rectum (poo).
+More rectum is bad as it contributes to $sluggishness, and can cause a Poo Explosion event at 100%. Do poos to decrease $rectum value
+Poos have a cooldown timer, the length of which is determined by Digestion. Better Digestion, faster you can poo again.
+Poos can't be done above 40% speed.
+Poo explosions cause some negative consequence (affecting "Health" stat? Increased probability of illness related events?). They force a 100% poo which gives a huge temporary
+
+speed boost without an energy cost.
+
+$sluggishness a variable that increases when stomach or rectum pass certain thresholds, and is used when calculating top speed
+
+eating hay increments stomach contents with food
+
+
+Perspiration system
+
+eating water increments stomach contents with water.
+water stomach content leaks into hydration and bladder the same way food does into rectum and energy
+
+wee system works exactly like the poo system
+
+
+$temperature is calculated from environment temperature & bpm.
+Sweating starts kicks in above a certain temperature and reduces temp back to the threshold at a ratedetermined on horse Sweatiness
+Sweating removes heat at the cost of hydration.
+hydration falls at a pace determined by bpm and Sweatiness
+
+Circadian system
+$tiredness builds up at a standard rate determinged by Endurance
+When at 20% or less, problems to things
+Going to sleep is an action
+Sleeping can only happen when stationary
+Sleeping restores tiredness and is when any stat growth occurs
+standing or lying sleep goes at different rates, with an event probability penalty?
+
+
+
+metabolic system
+tdee = bpm added each tick for one cycle of the clock sets calorie break even for day
+could map calorie system onto hay. this would affect stats such as
+muscle mass
+body fat
+BMR
+which could be used when calculating stuff like top speed, endurance, etc
+
+alternately could simply map calorie surplus/defecit directly onto a stat growth system on the endurance/top speed stats
+
+
+
+Stats
+Top Speed (how fast you can go. should be able to grow it somehow. adjusted down for sluggishness, tiredness, maybe other stuff like bladder threshold or
+Endurance (how quickly energy drains during movement. maybe it does this by actually being the figure referenced when calculating how the heartbeat reacts to movement/stress)
+Digestion (used by lots of processes but mainly how quick stomach moves to rectum and poo cooldowns.
+Sweatiness (base sweat rate)
+
+pulling stuff like trailors might need a strength stat.
+
+
